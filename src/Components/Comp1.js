@@ -20,7 +20,7 @@ export default function Comp1(props) {
 
     
     // const [data, setData] = useState(null);
-    const stringWithoutQuotes = token.replace(/"/g, "");
+    const stringWithoutQuotes = token?.replace(/"/g, "");
 
     const { dataId } = useParams();
 
