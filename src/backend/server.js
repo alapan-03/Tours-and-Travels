@@ -17,7 +17,7 @@ const cors = require('cors');
 //   app.use(cors(corsOptions));
 
 app.use(cors({
-    origin: 'http://localhost:3001', // Replace with your React app's URL
+    origin: 'https://tours-and-travels-8893.onrender.com', // Replace with your React app's URL
     credentials: true,
 }));
 
