@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useReducer } from 'react';
 import Cookies from 'universal-cookie';
 import del from "./../Assets/trash-2.png"
+import URL from "./rootUrl"
 
 
 export default function Me(props) {
@@ -20,7 +21,7 @@ export default function Me(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:4000/api/v1/users/me',
+        const response = await fetch(`${URL}/api/v1/users/me`,
         {
          method: 'GET',
          headers: {
@@ -51,7 +52,7 @@ export default function Me(props) {
   
     const deleteData = async (id) => {
       try {
-        const response = await fetch(`http://127.0.0.1:4000/api/v1/users/cancelBooking/${id}`,
+        const response = await fetch(`${URL}/api/v1/users/cancelBooking/${id}`,
         {
          method: 'DELETE',
          headers: {
