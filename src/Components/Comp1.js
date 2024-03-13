@@ -7,6 +7,7 @@ import Sec3 from './Sec3';
 import Sec4 from './Sec4';
 import Login from './Login';
 import Cookies from 'universal-cookie';
+import URL from "./rootUrl"
 
 
 // export const UserContext = createContext()
@@ -39,7 +40,7 @@ export default function Comp1(props) {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await fetch(`http://127.0.0.1:4000/api/v1/tours/${dataId}`,{
+            const response = await fetch(`${URL}/api/v1/tours/${dataId}`,{
                 method: 'GET',
                 headers: {
                     Authorization: `Bearer ${stringWithoutQuotes}`, // Include the token in the Authorization header
