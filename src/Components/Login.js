@@ -3,6 +3,7 @@ import { useEffect, useState} from "react";
 import cookie from"js-cookie"
 import Cookies from 'universal-cookie';
 import { Link, useNavigate } from "react-router-dom";
+import URL from "./rootUrl"
 
 
 export default function Login(props) {
@@ -38,7 +39,7 @@ export default function Login(props) {
   
   const handlePostRequest = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:4000/api/v1/users/login', {
+      const response = await fetch(`${URL}/api/v1/users/login`, {
         method: 'POST',
         credentials: "include",
         headers: {

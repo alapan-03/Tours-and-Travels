@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Cookies from 'universal-cookie';
 import cross from "./../Assets/cross.png"
 import { Link, useParams } from 'react-router-dom';
+import URL from "./rootUrl"
 
 
 export default function AdditionalDetails(props) {
@@ -70,7 +71,7 @@ export default function AdditionalDetails(props) {
       
       const handlePostData = async () => {
         try {
-          const response = await fetch(`http://127.0.0.1:4000/api/v1/details/${tourId}/addDetails`, {
+          const response = await fetch(`${URL}/api/v1/details/${tourId}/addDetails`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

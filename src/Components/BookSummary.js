@@ -6,6 +6,7 @@ import calender from "./../Assets/calendar-days (2).png"
 import people from "./../Assets/users.png"
 import dollar from "./../Assets/dollar-sign.png"
 import Footer from "./Footer"
+import URL from "./rootUrl"
 import Navbar from "./Navbar"
 
 
@@ -34,7 +35,7 @@ export default function BookSummary(props) {
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await fetch(`http://127.0.0.1:4000/api/v1/details/${dataId2}/getAllDetails`,
+          const response = await fetch(`${URL}/api/v1/details/${dataId2}/getAllDetails`,
            {
             method: 'GET',
             headers: {

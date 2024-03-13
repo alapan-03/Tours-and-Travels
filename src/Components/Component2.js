@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/autoplay";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Link } from "react-router-dom";
+import URL from "./rootUrl"
 
 export default function Component2(props) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -35,10 +36,12 @@ export default function Component2(props) {
       // return;
     }
 
+    console.log(URL)
+
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://127.0.0.1:4000/api/v1/tours?name=${props.data}`,
+          `${URL}/api/v1/tours?name=${props.data}`,
           {
             method: "GET",
             headers: {

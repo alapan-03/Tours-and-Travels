@@ -71,7 +71,7 @@ function signOut(){
 
         </ul>
 
-        <Link to="/login"><button className="login-btn">{userName===null || userName===undefined ? userName.substring(1,2) : `Login`}</button></Link>
+        <Link to="/login"><button className="login-btn">{userName===null || userName===undefined ? userName?.substring(1,2) : `Login`}</button></Link>
 
     </div>
 
